@@ -1,0 +1,739 @@
+<!DOCTYPE html> {% load static %}{% static "scroler" as baseUrl %}
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--corosal-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <title>hyderabadievents.in</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<style>
+    .footer-content-wrapper {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 4;
+        top: 130px;
+        left: 0;
+        padding: 6px 0;
+        text-align: center;
+    }
+
+    .footer-content-wrapper .flex {
+        flex-direction: column;
+    }
+
+    .footer-content-wrapper .entry-title {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .footer-content-wrapper .entry-title a {
+        font-size: 52px;
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+        line-height: 1;
+        text-decoration: none;
+    }
+
+    @media screen and (min-width: 576px) {
+        .footer-content-wrapper .entry-title a {
+            font-size: 100px;
+        }
+    }
+
+    .footer-content-wrapper .entry-mail {
+        margin-top: 16px;
+        font-size: 16px;
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+    }
+
+    .footer-content-wrapper .entry-mail a {
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+    }
+
+    .footer-content-wrapper .copyright-info {
+        margin-top: 20px;
+        font-size: 12px;
+        color: hsl(0, 0%, 100%);
+    }
+
+    .footer-content-wrapper .footer-social {
+        margin-top: 32px;
+    }
+
+    .footer-content-wrapper .footer-social .flex {
+        flex-direction: row !important;
+    }
+
+    .footer-content-wrapper .footer-social ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer-content-wrapper .footer-social ul a {
+        padding: 5px 16px;
+        font-size: 12px;
+        color: hsl(0, 0%, 100%);
+    }
+
+    .site-footer::before {
+        position: absolute;
+        content: " ";
+        height: 250px;
+        width: 100%;
+        z-index: 3;
+        background: hsla(0, 0%, 5%, 0) !important;
+        top: 0;
+        left: 0;
+    }
+
+    .container {
+        width: 100%;
+
+    }
+
+    .content-section {
+        min-height: 25px;
+        width: 100%;
+        padding-bottom: 120px;
+        background: url("images/middle-cover.jpg") no-repeat;
+        background-size: 100% auto;
+    }
+
+    .icon-bar {
+        position: fixed;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .icon-bar a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+    }
+
+    .icon-bar a:hover {
+        background-color: #000;
+    }
+
+    .insta {
+        background: #f2f4f7;
+        color: white;
+    }
+
+    .whatsapp {
+        background: #f2f4f7;
+        color: white;
+    }
+
+    .contact {
+        background: #f2f4f7;
+        color: white;
+    }
+
+    .facebook {
+        background: #f2f4f7;
+        color: white;
+    }
+
+    .youtube {
+        background: #f2f4f7;
+        color: white;
+    }
+
+    .mail {
+        background: #f2f4f7;
+        color: white;
+    }
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+</style>
+
+<body style="overflow-x:hidden">
+
+    <header class="site-header">
+        <div class="header-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-10 col-lg-4">
+                        <h1 class="site-branding flex">
+
+                            <img src="{% static 'images/footer.jpg' %}" style="width:200px; height:62px; back">
+
+                        </h1>
+                    </div>
+                    <div class="icon-bar">
+                        <a href="https://www.instagram.com/hyderabadievents/" target= "_blank" class="insta"><i><img src="{% static 'images/instagram.png' %}" style="width:29px;"></i></a>
+                        {% comment %} <div class="tooltip">Hover over me
+                        <span class="tooltiptext">786453648531</span> {% endcomment %}
+
+                        <a  class="whatsapp"><b><abbr title="+91 6301808462"><img src="{% static 'images/whatsapp.png' %}"  style="width:29px;"></abbr></b></a>
+                        
+                        
+                        {% comment %} <a href="#" class="contact"><i><img src="{% static 'images/viber.png' %}" style="width:29px;"></i></a> {% endcomment %}
+                        <a href="https://www.facebook.com/hyderabadievents2019/" target= "_blank" class="facebook"><i><img src="{% static 'images/facebook.png' %}" style="width:29px;"></i></a>
+                        <a href="https://www.youtube.com/channel/UCjyZPzrzg05pCg3MHIbOvwA/featured" target= "_blank" class="youtube"><i><img src="{% static 'images/youtube.png' %}" style="width:29px;"></i></a>
+                        {% comment %} <a href="#" class="mail"><i><img src="{% static 'images/gmail.png' %}" style="width:29px;"></i></a> {% endcomment %}
+                    </div>
+
+                    <div class="col-2 col-lg-8">
+                        <nav class="site-navigation">
+                            <div class="hamburger-menu d-lg-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <!-- .hamburger-menu -->
+
+                            <ul style=" letter-spacing:3px;font-size: 18px; font-weight: 600;">
+                                <li ><a href="{% url 'home' %}">HOME</a></li>
+                                <li><a href="{% url 'about' %}">ABOUT</a></li>
+
+                                <li><a href="{% url 'gallery' %}">GALLERY</a></li>
+                                <!-- <li><a href="#">BLOG</a></li> -->
+                                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                                <li><a href="#"><i class="fas fa-searchh"></i></a></li>
+                            </ul>
+                            <!-- flex -->
+                        </nav>
+                        <!-- .site-navigation -->
+                    </div>
+                    <!-- .col-12 -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- container-fluid -->
+        </div>
+        <!-- header-bar -->
+
+    </header>
+    <!-- .site-header -->
+
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="introCarousel ">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="{% static 'images/thick3.jpg' %}" alt="Los Angeles" style="width:100%; " class="tales">
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'images/thick2.jpg' %}" alt="Chicago" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'images/thick1.jpg' %}" alt="New york" style="width:100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="the-complete-lineup">
+                <div class="container">
+                    <div class="entry-title">
+                        <h2>OUR SERVICES</h2>
+                    </div>
+                    <!-- entry-title -->
+
+                    <div class="row the-complete-lineup-artists">
+                        <div class="col-6 col-md-4 col-lg-3 artist-single">
+                            <figure class="featured-image">
+                                {% comment %} <a href="#"> <img src="{% static 'images/8 6.jpg' %}" alt=""
+                                        data-toggle="lightbox" data-max-width="600"> </a>
+                                <a href="#" class="box-link"> <img src="{% static 'images/box.jpg' %}" alt=""> </a>
+                                {% endcomment %}
+                                <a href="{% static 'images/8 6.jpg' %}" target="_blank" data-toggle="lightbox"
+                                    data-max-width="100px" data-title="A random title"
+                                    data-footer="A custom footer text">
+                                    <img src="{% static 'images/8 6.jpg' %}" class="img-fluid">
+                                    {% comment %} <a href="{% url 'gallery' %}" class="box-link"> <img
+                                            src="{% static 'images/box.jpg' %}" alt=""> </a> {% endcomment %}
+                                </a>
+                            </figure>
+                            <!-- featured-image -->
+
+                            <h2>BIRTHDAY</h2>
+                        </div>
+                        <!-- artist-single -->
+
+                        <div class="col-6 col-md-4 col-lg-3 artist-single">
+                            <figure class="featured-image">
+                                <a href="{% static 'images/8 7.jpg' %}" target="_blank" data-toggle="lightbox"
+                                    data-max-width="100px" data-title="A random title"
+                                    data-footer="A custom footer text">
+                                    <img src="{% static 'images/8 7.jpg' %}" class="img-fluid">
+                                    {% comment %} <a href="{% url 'gallery' %}" class="box-link"> <img
+                                            src="{% static 'images/box.jpg' %}" alt=""> </a> {% endcomment %}
+                                </a>
+                            </figure>
+                            <!-- featured-image -->
+
+                            <h2>WEDDING</h2>
+                        </div>
+                        <!-- artist-single -->
+
+                        <div class="col-6 col-md-4 col-lg-3 artist-single">
+                            <figure class="featured-image">
+                                <a href="{% static 'images/8 1.jpg' %}" target="_blank" data-toggle="lightbox"
+                                    data-max-width="100px" data-title="A random title"
+                                    data-footer="A custom footer text">
+                                    <img src="{% static 'images/8 1.jpg' %}" class="img-fluid">
+                                    {% comment %} <a href="{% url 'gallery' %}" class="box-link"> <img
+                                            src="{% static 'images/box.jpg' %}" alt=""> </a> {% endcomment %}
+                                </a>
+                            </figure>
+                            <!-- featured-image -->
+
+                            <h2>HOUSE WARMING</h2>
+                        </div>
+                        <!-- artist-single -->
+
+                        <div class="col-6 col-md-4 col-lg-3 artist-single">
+                            <figure class="featured-image">
+                                <a href="{% static 'images/8 3.jpg' %}" target="_blank" data-toggle="lightbox"
+                                    data-max-width="100px" data-title="A random title"
+                                    data-footer="A custom footer text">
+                                    <img src="{% static 'images/8 3.jpg' %}" class="img-fluid">
+                                    {% comment %} <a href="{% url 'gallery' %}" class="box-link"> <img
+                                            src="{% static 'images/box.jpg' %}" alt=""> </a> {% endcomment %}
+                                </a>
+                            </figure>
+                            <!-- featured-image -->
+
+                            <h2>ANNIVERSARY</h2>
+                        </div>
+                        <!-- artist-single -->
+
+                        <div class="col-6 col-md-4 col-lg-3 artist-single">
+                            <figure class="featured-image">
+                                <a href="{% static 'images/8 5.jpg' %}" target="_blank" data-toggle="lightbox"
+                                    data-max-width="100px" data-title="A random title"
+                                    data-footer="A custom footer text">
+                                    <img src="{% static 'images/8 5.jpg' %}" class="img-fluid">
+                                    {% comment %} <a href="{% url 'gallery' %}" class="box-link"> <img
+                                            src="{% static 'images/box.jpg' %}" alt=""> </a> {% endcomment %}
+                                </a>
+                            </figure>
+                            <!-- featured-image -->
+
+                            <h2>HALDI</h2>
+                        </div>
+                        <!-- artist-single -->
+
+                        <div class="col-6 col-md-4 col-lg-3 artist-single">
+                            <figure class="featured-image">
+                                <a href="{% static 'images/8 8.jpg' %}" target="_blank" data-toggle="lightbox"
+                                    data-max-width="100px" data-title="A random title"
+                                    data-footer="A custom footer text">
+                                    <img src="{% static 'images/8 8.jpg' %}" class="img-fluid">
+                                    {% comment %} <a href="{% url 'gallery' %}" class="box-link"> <img
+                                            src="{% static 'images/box.jpg' %}" alt=""> </a> {% endcomment %}
+                                </a>
+                            </figure>
+                            <!-- featured-image -->
+
+                            <h2>CRADLE CEREMONY</h2>
+                        </div>
+                        <!-- artist-single -->
+
+                        <div class="col-6 col-md-4 col-lg-3 artist-single">
+                            <figure class="featured-image">
+                                <a href="{% static 'images/8 4.jpg' %}" target="_blank" data-toggle="lightbox"
+                                    data-max-width="100px" data-title="A random title"
+                                    data-footer="A custom footer text">
+                                    <img src="{% static 'images/8 4.jpg' %}" class="img-fluid">
+                                    {% comment %} <a href="{% url 'gallery' %}" class="box-link"> <img
+                                            src="{% static 'images/box.jpg' %}" alt=""> </a> {% endcomment %}
+                                </a>
+                            </figure>
+                            <!-- featured-image -->
+
+                            <h2>CATERING</h2>
+                        </div>
+                        <!-- artist-single -->
+
+                        <div class="col-6 col-md-4 col-lg-3 artist-single">
+                            <figure class="featured-image">
+                                <a href="{% static 'images/8 2.jpg' %}" target="_blank" data-toggle="lightbox"
+                                    data-max-width="100px" data-title="A random title"
+                                    data-footer="A custom footer text">
+                                    <img src="{% static 'images/8 2.jpg' %}" class="img-fluid">
+                                    {% comment %} <a href="{% url 'gallery' %}" class="box-link"> <img
+                                            src="{% static 'images/box.jpg' %}" alt=""> </a> {% endcomment %}
+                                </a>
+                            </figure>
+                            <!-- featured-image -->
+
+                            <h2>PHOTOGRAPHY</h2>
+                        </div>
+                    </div>
+                    <!-- the-complete-lineup-artists -->
+
+                    <div class="row justify-content-center">
+                        <div class="see-complete-lineup">
+                            <div class="entry-footer">
+                                <a href="{% url 'gallery' %}" class="btn">gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- the-complete-lineup -->
+            </div>
+            <!-- col-12 -->
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+    <div class="homepage-next-events">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="entry-title">
+
+                        <h2>Our Events</h2>
+                    </div>
+                    <!-- entry-title -->
+                </div>
+                <!-- col-12 -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+
+        <div class="next-event-slider-wrap">
+            <div class="swiper-container next-event-slider">
+                <div class="swiper-wrapper">
+                    {% for data in data_scroler %}
+                    <div class="swiper-slide">
+
+                        <div class="next-event-content">
+                            <figure class="featured-image">
+                                <img src="{{data.image.url}}" alt="">
+
+                                {% comment %} <a href="#"
+                                    class="entry-content flex flex-column justify-content-center align-items-center">
+                                    <h3>{{data.title}}</h3> 
+
+                                </a> {% endcomment %}
+                            </figure>
+
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                    <!-- swiper-slide" 1-->
+
+
+                </div>
+                <!-- .swiper-wrapper -->
+            </div>
+            <!-- .swiper-container -->
+
+            <div class="swiper-button-next">
+                <img src="{% static 'images/button.png' %}" alt="">
+            </div>
+            <!-- .slider-button -->
+        </div>
+        <!-- .next-event-slider-wrap -->
+    </div>
+    <!-- homepage-next-events -->
+    <div class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="lineup-artists-headline">
+                        <div class="entry-title">
+
+                            <h2>HYDERABADI EVENTS</h2>
+                        </div>
+                        <!-- entry-title -->
+
+                        <div class="lineup-artists">
+                            <div class="lineup-artists-wrap flex flex-wrap">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'images/logo 11.jpg' %}" alt=""> </a>
+                                </figure>
+                                <!-- featured-image -->
+
+                                <div class="lineup-artists-description">
+                                    <div class="lineup-artists-description-container">
+                                        <div class="entry-title">
+                                            ABOUT US.
+                                        </div>
+                                        <!-- entry-title -->
+
+                                        <div class="entry-content">
+                                            <p>We are all young team members who are always dreamt of making special
+                                                memories and to provide all services under one roof and make your dreams
+                                                alive with friendly budget.</p>
+                                        </div>
+                                        <!-- entry-content -->
+
+                                        {% comment %} <div class="box-link">
+                                            <a href=""><img src="{% static 'images/box.jpg' %}" alt=""></a>
+                                        </div> {% endcomment %}
+                                        <!-- box-link -->
+                                    </div>
+                                    <!-- lineup-artists-description-container -->
+                                </div>
+                                <!-- lineup-artists-description -->
+                            </div>
+                            <!-- lineup-artists-wrap -->
+
+                            <div class="lineup-artists-wrap flex flex-wrap">
+                                <div class="lineup-artists-description">
+                                    <figure class="featured-image d-md-none">
+                                        <a href="#"> <img src="{% static 'images/speciality.jpg' %}" alt=""> </a>
+                                    </figure>
+                                    <!-- featured-image -->
+
+                                    <div class="lineup-artists-description-container">
+                                        <div class="entry-title">
+                                            SPECIALITY!
+                                        </div>
+                                        <!-- entry-title -->
+
+                                        <div class="entry-content">
+                                            <p>As we will not only decorate according to the pics we also design
+                                                according to the place and make it look beautiful.we provide our service
+                                                according to your budget range and worthy service too.YOUR OCCASSION OUR
+                                                RESPONSIBILITY </p>
+                                        </div>
+                                        <!-- entry-content -->
+
+                                        {% comment %} <div class="box-link">
+                                            <a href="#"><img src="{% static 'images/box.jpg' %}" alt=""></a>
+                                        </div> {% endcomment %}
+                                        <!-- box-link -->
+                                    </div>
+                                    <!-- lineup-artists-description-container -->
+                                </div>
+                                <!-- lineup-artists-description -->
+
+                                <figure class="featured-image d-none d-md-block">
+                                    <a href="#"> <img src="{% static 'images/speciality.jpg' %}" alt=""> </a>
+                                </figure>
+                                <!-- featured-image -->
+                            </div>
+                            <!-- lineup-artists-wrap -->
+
+                            <div class="lineup-artists-wrap flex flex-wrap">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'images/why 2.jpg' %}" alt=""> </a>
+                                </figure>
+                                <!-- featured-image -->
+
+                                <div class="lineup-artists-description">
+                                    <div class="lineup-artists-description-container">
+                                        <div class="entry-title">
+                                            WHY HYDERABADI EVENTS?
+                                        </div>
+                                        <!-- entry-title -->
+
+                                        <div class="entry-content">
+                                            <p>We will take care of every detailing in the decoration and we also provide 
+                                                our service according to your willing budget without showing financial bias 
+                                                with basic price from  2499/- to high level. </p>
+                                        </div>
+                                        <!-- entry-content -->
+
+                                        {% comment %} <div class="box-link">
+                                            <a href="#"> <img src="{% static 'images/box.jpg' %}" alt=""></a>
+                                        </div> {% endcomment %}
+                                        <!-- box-link -->
+                                    </div>
+                                    <!-- lineup-artists-description-container -->
+                                </div>
+                                <!-- lineup-artists-description -->
+                            </div>
+                            <!-- lineup-artists-wrap -->
+                        </div>
+                        <!-- lineup-artists -->
+                    </div>
+                    <!-- lineup-artists-headline -->
+                </div>
+                <!-- col-12 -->
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer class="page-footer font-small mdb-color pt-4 site-footer">
+        <div class="contact-page">
+
+            <img src="{% static 'images/footer.jpg' %}" alt="Los Angeles" style="width:100%; height:500px "
+                class="tales">
+
+        </div>
+
+        <div class=" text-center text-md-left" style="padding-left:60px;">
+
+            <!-- Footer links -->
+            <div class="row text-center text-md-left mt-3 pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold" style="color:black;font-size:20px">Company-Details
+                    </h6>
+                    <p style="color:black;font-size:16px">We all are young team members who are always dreamt of making
+                        special memories and to provide all services under one roof and make your dreams alive with
+                        friendly budget.</p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold" style="color:black;font-size:20px">Quick links</h6>
+                    <p>
+                        <a href="{% url 'home' %}">Home</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'about' %}">About</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'gallery' %}">Gallery</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'contact' %}">Contact</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                {% comment %}
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold" style="color:black;font-size:20px">Useful links
+                    </h6>
+                    <p>
+                        <a href="#!">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="#!">Become an Affiliate</a>
+                    </p>
+                    <p>
+                        <a href="#!">Shipping Rates</a>
+                    </p>
+                    <p>
+                        <a href="#!">Help</a>
+                    </p>
+                </div> {% endcomment %}
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="color:black;font-size:20px">
+                <h6 class="text-uppercase mb-4 font-weight-bold" style="color:black;font-size:20px">Contact-Info</h6>
+                <p style="font-size:16px">
+                <i class="fas fa-home mr-3"></i>hyderabad</p>
+                <p style="font-size:15px">
+                <i class="fas fa-envelope mr-3"></i>hyderabadievents2019@gmail.com</p>
+                <p style="font-size:16px">
+                <i class="fas fa-phone mr-3"></i>6301808462</p>
+                <p style="font-size:16px">
+                <i class="fas fa-print mr-3"></i>6301808462</p>
+            </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Footer links -->
+
+            <hr>
+
+            <!-- Grid row -->
+            <div class="row d-flex align-items-center">
+
+                <!-- Grid column -->
+                <div class="col-md-7 col-lg-8">
+
+                    <!--Copyright-->
+                    <p class="text-center text-md-left" style="color:black">© 2020 Copyright:
+                        <a href="#">
+                            <strong>hyderabadievents.in</strong>
+                        </a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+    </footer>
+    <!-- site-footer -->
+
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    {% comment %} <script type="text/javascript" src="{% static 'js/masonry.pkgd.min.js' %}"></script> {% endcomment %}
+    <script type="text/javascript" src="{% static 'js/jquery.collapsible.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/swiper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    {% comment %} <script type="text/javascript" src="{% static 'js/circle-progress.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="{% static 'js/jquery.countTo.min.js' %}"></script> {% endcomment %}
+    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>
